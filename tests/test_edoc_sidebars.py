@@ -114,14 +114,4 @@ def test_version_history(driver):
     assert True
 
 
-def test_change_description(driver):
-    searchbar = wait_of_element_located(xpath='//*[@id="input-with-icon-textfield"]', driver=driver)
-    searchbar.click()
-    searchbar.send_keys('closing')  # Any CORRECT value applicable
-    result = wait_of_element_located(
-        xpath='/html/body/div[1]/main/div[2]/div[1]/div/div[3]/ul/div/div[2]/div/div/div/div/div', driver=driver)
-    result.click()
-    main_prop = wait_of_element_located(xpath='//*[@id="root"]/main/div[2]/div[3]/div/div[2]/div[1]/div', driver=driver)
-    main_prop.click()
-    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.ID, ":r1k:")))
-    time.sleep(60)
+
