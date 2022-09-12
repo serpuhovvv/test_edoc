@@ -11,7 +11,7 @@ from selenium.webdriver.common.keys import Keys
 
 @pytest.fixture
 def driver():
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(executable_path='/Users/serpuhovvv/Python Dev/QA/venv/chromedriver')
     driver.maximize_window()
     driver.get('https://edoc.admortgage.us/loan/1006510')  # Any URL applicable
     yield driver

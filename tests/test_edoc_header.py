@@ -14,7 +14,7 @@ import time
 
 @pytest.fixture
 def driver():
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(executable_path='/Users/serpuhovvv/Python Dev/QA/venv/chromedriver')
     driver.maximize_window()
     driver.get('https://edoc.admortgage.us/loan/1003636')  # Any URL applicable
     input_username = wait_of_element_located(xpath='//*[@id=":r0:"]', driver=driver)
