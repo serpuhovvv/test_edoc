@@ -9,6 +9,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 # Launch: pytest --alluredir reports -n 3
 # Report:  allure serve reports
 
+# delete from git cache: git rm --cached "file_path"
+
 @pytest.fixture
 def driver_login():
     driver = webdriver.Chrome()
