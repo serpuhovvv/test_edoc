@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="60826a48-4af7-48df-9f17-716b17ef87e2" name="Changes" comment="" />
+    <list default="true" id="60826a48-4af7-48df-9f17-716b17ef87e2" name="Changes" comment="fix">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_20_2022_8_56_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_20_2022_8_56_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_20_2022_8_48_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_20_2022_8_48_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,20 +68,20 @@
       <recent name="C:\Users\SergPudikov\PycharmProjects\test_edoc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for tests.test_edoc_header.test_loan_number">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.test_edoc">
+    <configuration name="test_edoc" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="test_edoc" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="C:\Users\SergPudikov\Python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -170,6 +174,14 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.test_edoc" />
+      <item itemvalue="Python tests.Python tests for tests.test_edoc_header.test_loan_number" />
+      <item itemvalue="Python tests.Python tests for tests.test_edoc_login.test_login_positive" />
+      <item itemvalue="Python tests.Python tests for tests.test_edoc_sidebars" />
+      <item itemvalue="Python tests.Python tests for tests.test_edoc_sidebars.test_change_description" />
+      <item itemvalue="Python tests.Python tests for tests.test_edoc_sidebars.test_version_history" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests for tests.test_edoc_sidebars.test_version_history" />
@@ -186,7 +198,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9002d90e-3de4-41eb-aada-8e1249108208" name="Changes" comment="" />
+      <changelist id="60826a48-4af7-48df-9f17-716b17ef87e2" name="Changes" comment="" />
       <created>1660754248544</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -234,7 +246,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663696381370</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix">
+      <created>1663696685184</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663696685184</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix">
+      <created>1663696773300</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663696773300</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix">
+      <created>1663696884155</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663696884156</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
