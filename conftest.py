@@ -5,7 +5,7 @@
 # pip install allure-pytest
 # pip install pytest-xdist
 
-# delete from git cache: git rm --cached -r "file_path"
+# delete from git cache: git rm --cached "file_path"
 
 # Launch: pytest --alluredir reports -n 3
 # Report:  allure serve reports
