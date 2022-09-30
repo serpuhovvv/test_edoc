@@ -1,3 +1,15 @@
+# pip install pytest
+# pip install selenium
+# pip install pytest-selenium
+# pip install requests
+# pip install allure-pytest
+# pip install pytest-xdist
+
+# delete from git cache: git rm --cached -r "file_path"
+
+# Launch: pytest --alluredir reports -n 3
+# Report:  allure serve reports
+
 import pytest
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
@@ -5,17 +17,16 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
 
-# Loans to use: 1006510, 1003636, 1006508
-# Launch: pytest --alluredir reports -n 3
-# Report:  allure serve reports
-
-# delete from git cache: git rm --cached "file_path"
-
 @pytest.fixture
 def driver_login():
     driver = webdriver.Chrome()
     driver.maximize_window()
-    driver.get('https://edoc.admortgage.us/login')  # Any URL applicable
+    driver.get('https://edoc.admortgage.com/login')
+
+    # Prod: https://edoc.admortgage.com/login
+    # Test: https://edoc.admortgage.us/login
+    # PreProd: https://edoc.preprod.admortgage.net/login
+
     yield driver
     driver.close()
 
@@ -24,7 +35,12 @@ def driver_login():
 def driver():
     driver = webdriver.Chrome()
     driver.maximize_window()
-    driver.get('https://edoc.admortgage.us/loan/1006508')  # Any URL applicable
+    driver.get('https://edoc.admortgage.com/loan/1003636')
+
+    # Prod: https://edoc.admortgage.com/loan/1003636
+    # Test: https://edoc.admortgage.us/loan/1006508
+    # PreProd: https://edoc.preprod.admortgage.net/loan/1027992
+
     input_username = wait_xpath(xpath='//*[@id=":r0:"]', driver=driver)
     input_password = wait_xpath(xpath='//*[@id=":r1:"]', driver=driver)
     login_button = wait_xpath(xpath='//*[@id=":r2:"]', driver=driver)

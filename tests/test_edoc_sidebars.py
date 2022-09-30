@@ -11,7 +11,7 @@ from conftest import wait_xpath
 def test_searchbar_positive(driver):
     searchbar = wait_xpath(xpath='//*[@id="input-with-icon-textfield"]', driver=driver)
     searchbar.click()
-    searchbar.send_keys('tran')  # Any CORRECT value applicable
+    searchbar.send_keys('app')  # Any CORRECT value applicable
     time.sleep(5)
     result = wait_xpath(
         xpath='/html/body/div[1]/main/div[2]/div[1]/div/div[3]/ul/div/div[2]/div/div/div/div/div', driver=driver)
