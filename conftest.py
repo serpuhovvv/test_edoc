@@ -5,7 +5,7 @@
 # pip install allure-pytest
 # pip install pytest-xdist
 
-# delete from git cache: git rm --cached "file_path"
+# Delete from git cache: git rm --cached "file_path"
 
 # Launch: pytest --alluredir reports -n 3
 # Report:  allure serve reports
@@ -48,6 +48,7 @@ def driver():
     input_username.send_keys('testUser')  # Any username applicable
     input_password.send_keys('Pass')  # Any password applicable
     login_button.click()
+
     yield driver
     driver.close()
 
