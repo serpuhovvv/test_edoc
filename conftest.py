@@ -16,34 +16,37 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
+produrl = 'https://edoc.admortgage.com/login'
+testurl = 'https://edoc.admortgage.us/login'
+preprodurl = 'https://edoc.preprod.admortgage.net/login'
+
+prodloan = 'https://edoc.admortgage.com/loan/1003636'
+testloan = 'https://edoc.admortgage.us/loan/1006508'
+preprodloan = 'https://edoc.preprod.admortgage.net/loan/1027992'
+
 
 @pytest.fixture
-def driver_login():
+def driver_init():
+    global driver
     driver = webdriver.Chrome()
     driver.maximize_window()
-    driver.get('https://edoc.admortgage.com/login')
 
-    # Prod: https://edoc.admortgage.com/login
-    # Test: https://edoc.admortgage.us/login
-    # PreProd: https://edoc.preprod.admortgage.net/login
+
+@pytest.fixture
+def driver_login(driver_init):
+    driver.get(produrl)
 
     yield driver
     driver.close()
 
 
 @pytest.fixture
-def driver():
-    driver = webdriver.Chrome()
-    driver.maximize_window()
-    driver.get('https://edoc.admortgage.com/loan/1003636')
+def driver_tests(driver_init):
+    driver.get(prodloan)
 
-    # Prod: https://edoc.admortgage.com/loan/1003636
-    # Test: https://edoc.admortgage.us/loan/1006508
-    # PreProd: https://edoc.preprod.admortgage.net/loan/1027992
-
-    input_username = wait_xpath(xpath='//*[@id=":r0:"]', driver=driver)
-    input_password = wait_xpath(xpath='//*[@id=":r1:"]', driver=driver)
-    login_button = wait_xpath(xpath='//*[@id=":r2:"]', driver=driver)
+    input_username = wait_xpath(xpath='//*[@id=":r0:"]')
+    input_password = wait_xpath(xpath='//*[@id=":r1:"]')
+    login_button = wait_xpath(xpath='//*[@id=":r2:"]')
 
     input_username.send_keys('testUser')  # Any username applicable
     input_password.send_keys('Pass')  # Any password applicable
@@ -53,7 +56,7 @@ def driver():
     driver.close()
 
 
-def wait_xpath(xpath, driver):
+def wait_xpath(xpath):
     element = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located(
             (By.XPATH, xpath)
@@ -62,7 +65,7 @@ def wait_xpath(xpath, driver):
     return element
 
 
-def wait_id(id, driver):
+def wait_id(id):
     element = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable(
             (By.ID, id)
