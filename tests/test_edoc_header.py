@@ -53,7 +53,8 @@ def test_user_icon_content(driver_tests):
     icon.click()
     icon_open = wait_xpath(xpath='//*[@id="simple-popover"]/div[3]/div')
 
-    assert 'ADMIN PANEL' and 'LOG OUT' in icon_open.text
+    assert 'ADMIN PANEL' in icon_open.text \
+           and 'LOG OUT' in icon_open.text
 
 
 @allure.feature('TestsHeader')
