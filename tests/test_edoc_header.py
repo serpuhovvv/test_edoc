@@ -1,3 +1,5 @@
+import time
+
 import allure
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver import ActionChains
@@ -36,7 +38,7 @@ def test_searchbar_negative(driver_tests):
 @allure.feature('TestsHeader')
 @allure.story('User icon test')
 def test_user_icon(driver_tests):
-    icon = wait_xpath(xpath='//*[@id="root"]/header/div/div[3]/div/div/div')
+    icon = wait_xpath(xpath='/html/body/div[1]/header/div/div[3]/div/div/div')
     icon.click()
 
     try:
@@ -49,9 +51,9 @@ def test_user_icon(driver_tests):
 @allure.feature('TestsHeader')
 @allure.story('User icon content test')
 def test_user_icon_content(driver_tests):
-    icon = wait_xpath(xpath='//*[@id="root"]/header/div/div[3]/div/div/div')
+    icon = wait_xpath(xpath='/html/body/div[1]/header/div/div[3]/div/div/div')
     icon.click()
-    icon_open = wait_xpath(xpath='//*[@id="simple-popover"]/div[3]/div')
+    icon_open = wait_xpath(xpath='/html/body/div[3]/div[3]/div')
 
     assert 'ADMIN PANEL' in icon_open.text \
            and 'LOG OUT' in icon_open.text
