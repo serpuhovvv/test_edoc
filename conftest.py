@@ -1,4 +1,4 @@
-# pip install requirements.txt
+# pip install -r requirements.txt
 
 # Delete from git cache: git rm --cached "file_path"
 
