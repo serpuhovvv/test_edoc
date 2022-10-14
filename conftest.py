@@ -1,9 +1,4 @@
-# pip install pytest
-# pip install selenium
-# pip install pytest-selenium
-# pip install requests
-# pip install allure-pytest
-# pip install pytest-xdist
+# pip install requirements.txt
 
 # Delete from git cache: git rm --cached "file_path"
 
