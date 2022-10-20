@@ -48,15 +48,15 @@ def test_user_icon(driver_tests):
     assert True
 
 
-@allure.feature('TestsHeader')
-@allure.story('User icon content test')
-def test_user_icon_content(driver_tests):
-    icon = wait_xpath(xpath='/html/body/div[1]/header/div/div[3]/div/div/div')
-    icon.click()
-    icon_open = wait_xpath(xpath='/html/body/div[3]/div[3]/div')
+# @allure.feature('TestsHeader')
+# @allure.story('User icon content test')
+# def test_user_icon_content(driver_tests):
+#       icon = wait_xpath(xpath='/html/body/div[1]/header/div/div[3]/div/div/div')
+#       icon.click()
+#       icon_open = wait_xpath(xpath='/html/body/div[3]/div[3]/div')
 
-    assert 'ADMIN PANEL' in icon_open.text \
-           and 'LOG OUT' in icon_open.text
+#       assert 'ADMIN PANEL' in icon_open.text \
+#       and 'LOG OUT' in icon_open.text
 
 
 @allure.feature('TestsHeader')
