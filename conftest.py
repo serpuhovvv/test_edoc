@@ -1,4 +1,5 @@
-# pip install -r requirements.txt
+# Create requirements: pip freeze > requirements.txt
+# Install requirements: pip install -r requirements.txt
 
 # Delete from git cache: git rm --cached "file_path"
 
