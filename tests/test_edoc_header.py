@@ -1,5 +1,4 @@
 import time
-
 import allure
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver import ActionChains
